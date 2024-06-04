@@ -1,0 +1,108 @@
+<header class="header">
+  <nav class="nav container">
+    <div class="nav-data">
+      <a href="#" class="nav-logo">TravelAgency</a>
+
+      <div class="nav-toggle" (click)="toggleMenu()">
+        <fa-icon
+          [icon]="faMenuIcon"
+          class="nav-toggle-menu"
+          [ngClass]="{
+            'show-menu': !isMenuToggle,
+            'hide-menu': isMenuToggle
+          }"
+        ></fa-icon>
+
+        <fa-icon
+          [icon]="faMenuCloseIcon"
+          class="nav-toggle-close"
+          [ngClass]="{
+            'show-menu': isMenuToggle,
+            'hide-menu': !isMenuToggle
+          }"
+        ></fa-icon>
+      </div>
+    </div>
+
+    <div
+      class="nav-menu"
+      id="nav-menu"
+      [ngClass]="{ 'show-menu': isMenuToggle }"
+    >
+      <ul class="nav-list">
+        <li>
+          <a href="" class="nav-link">Home</a>
+        </li>
+
+        <li class="dropdown-item">
+          <div class="nav-link dropdown-button" (click)="onToggleDropdown(0)">
+            Mais vendidos<fa-icon
+              [icon]="faArrowDownIcon"
+              class="dropdown-arrow"
+            ></fa-icon>
+          </div>
+          <div
+            class="dropdown-container"
+            [ngClass]="{ 'show-dropdown': openDropdownIndex === 0 }"
+          >
+            <div class="dropdown-content">
+              <div class="dropdown-group">
+                <div class="dropdown-icon">
+                  <fa-icon
+                    [icon]="faHouseIcon"
+                    class="dropdown-arrow"
+                  ></fa-icon>
+                </div>
+                <span class="dropdown-title">House</span>
+                <ul class="dropdown-list">
+                  <li>
+                    <a href="" class="dropdown-link">Casa 1 linda</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="dropdown-item">
+          <div class="nav-link dropdown-button" (click)="onToggleDropdown(1)">
+            About<fa-icon
+              [icon]="faArrowDownIcon"
+              class="dropdown-arrow"
+            ></fa-icon>
+          </div>
+          <div
+            class="dropdown-container"
+            [ngClass]="{ 'show-dropdown': openDropdownIndex === 1 }"
+          >
+            <div class="dropdown-content">
+              <div class="dropdown-group">
+                <div class="dropdown-icon">
+                  <fa-icon [icon]="faWorkIcon" class="dropdown-arrow"></fa-icon>
+                </div>
+                <span class="dropdown-title">Trabalhe com conosco</span>
+                <ul class="dropdown-list">
+                  <li>
+                    <a href="" class="dropdown-link">Veja nossas vagas</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown-group">
+                <div class="dropdown-icon">
+                  <fa-icon [icon]="faWorkIcon" class="dropdown-arrow"></fa-icon>
+                </div>
+                <span class="dropdown-title">Trabalhe com conosco</span>
+                <ul class="dropdown-list">
+                  <li>
+                    <a href="" class="dropdown-link">Veja nossas vagas</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
