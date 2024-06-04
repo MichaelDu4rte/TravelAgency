@@ -21,3 +21,19 @@ a {
     text-decoration: none;
 }
 
+
+// reusing
+
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+  
+
+.section-header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+}

@@ -1,0 +1,113 @@
+
+.banner-container {
+    padding: 1rem 1rem 5rem 1rem;
+    margin-top: 7rem;
+}
+
+.banner-image-container {
+    position: relative;
+    min-height: 500px;
+    background-image: linear-gradient(to right, rgba(44, 55, 85, 0.9), rgba(100, 125, 187, 0.1)), 
+    url("/assets/images/home-banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+}
+
+.banner-content {
+    max-width: 600px;
+    padding: 5rem 2rem;
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        line-height: 4rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    p {
+        color: #f4f4f4;
+    }
+}
+
+.booking-container {
+    position: absolute;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 6rem);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    box-shadow: 5px 5px 30px rgba(100, 125, 187, .5);
+
+    form {
+        width: 100%;
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .input-group {
+        width: 100%;
+        position: relative;
+    }
+
+    label {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        color: #333;
+        pointer-events: none;
+        font-weight: 500;
+        transition: all .3s;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #333;
+        color: #333;
+
+        &:focus ~ label,
+        &:not(:placeholder-shown) ~ label  {
+            font-size: 1.5rem;
+            top: -0.5rem;
+        }
+    }
+
+    .gorm-group p {
+        margin-top: .5rem;
+        font-size: .8rem;
+    }
+
+    .btn {
+        padding: 1rem;
+        outline: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #fff;
+        background: #333;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            background-color: blue;
+        }
+    }
+}
+
