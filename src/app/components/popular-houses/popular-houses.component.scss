@@ -8,6 +8,14 @@
     gap: 2rem;
     margin-top: 4rem;
 
+    @media (max-width: 900px) {
+         grid-template-columns: repeat(2, 1fr); 
+    }
+
+     @media (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
     .popular-card {
         overflow: hidden;
         border-radius: 1.5rem;
@@ -50,4 +58,8 @@
             transform: translateY(-10px);
         }
     }
+
+
+   
 }
+

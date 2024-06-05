@@ -2,6 +2,10 @@
 .banner-container {
     padding: 1rem 1rem 5rem 1rem;
     margin-top: 7rem;
+
+    @media (max-width: 600px) {
+        padding-bottom: 25rem; 
+    }
 }
 
 .banner-image-container {
@@ -47,13 +51,28 @@
     border-radius: 2rem;
     box-shadow: 5px 5px 30px rgba(100, 125, 187, .5);
 
+    @media (max-width: 600px) {
+        flex-direction: column;
+        bottom: -28rem;
+    }
+
     form {
         width: 100%;
         flex: 1;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
+
+        @media (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: repeat(1, 1fr); 
+        }
+     
     }
+
 
     .input-group {
         width: 100%;
@@ -110,4 +129,5 @@
         }
     }
 }
+
 
