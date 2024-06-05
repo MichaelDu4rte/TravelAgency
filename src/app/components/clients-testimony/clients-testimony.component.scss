@@ -1,0 +1,48 @@
+
+
+.client-container {
+
+
+    .client-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 4rem;
+
+        .client-card {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 2rem;
+            background-color: #ececec;
+            border-radius: 1.5rem 1rem;
+            box-shadow: 5px 7px 10px rgba(black, 0.5);
+            transition: all .3s;
+
+            &:hover {
+                box-shadow: 5px 7px 10px 5px rgba(black, 0.7);
+                transform: translateY(-5px);
+
+                img {
+                    transform: rotate(-10deg);
+                    box-shadow: 5px 7px 10px rgba(black, 0.7);
+                }
+            }
+            
+
+            img {
+                max-width: 80px;
+                margin: auto;
+                margin-bottom: 1rem;
+                border-radius: 100%;
+                transition: all .5s;
+                box-shadow: 5px 7px 10px rgba(black, 0.5);
+            }
+
+            p {
+                text-align: center;
+                color: #333;
+            }
+        }
+    }
+}
