@@ -1,3 +1,5 @@
 <app-navbar></app-navbar>
-<app-products-recommended></app-products-recommended>
-<app-products-list></app-products-list>
+<app-products-recommended
+  (filterCriteria)="handleFilterCriteria($event)"
+></app-products-recommended>
+<app-products-list [criteria]="selectedCriteria"></app-products-list>

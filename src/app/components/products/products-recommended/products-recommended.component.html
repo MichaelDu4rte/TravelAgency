@@ -1,9 +1,30 @@
 <div class="section-container recommended-container">
   <h2>Recomendações</h2>
   <div class="recommended-btns">
-    <button>All Producsts</button>
-    <button>All Producsts</button>
-    <button>All Producsts</button>
-    <button>All Producsts</button>
+    <button
+      class="active"
+      (click)="setFilter('todos')"
+      [class.active]="selectedCriteria === 'todos'"
+    >
+      Todos
+    </button>
+    <button
+      (click)="setFilter('maisPopulares')"
+      [class.active]="selectedCriteria === 'maisPopulares'"
+    >
+      Mais Populares
+    </button>
+    <button
+      (click)="setFilter('maiorPreco')"
+      [class.active]="selectedCriteria === 'maiorPreco'"
+    >
+      Maior Preço
+    </button>
+    <button
+      (click)="setFilter('menorPreco')"
+      [class.active]="selectedCriteria === 'menorPreco'"
+    >
+      Menor Preço
+    </button>
   </div>
 </div>

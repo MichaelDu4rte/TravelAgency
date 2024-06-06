@@ -25,6 +25,14 @@
             border-radius: 5px;
             color: #333;
             cursor: pointer;
+            transition: all .3s;
+
+            &.active {
+                background-color: rgb(65, 153, 254);
+                color: #fff;
+                transition: all .3s;
+                
+            }
         }
     }
    

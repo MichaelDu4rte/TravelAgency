@@ -11,5 +11,9 @@ import { ProductsRecommendedComponent } from '../../components/products/products
   styleUrl: './products.component.scss'
 })
 export class ProductsComponent {
+  selectedCriteria: string = 'todos';
 
+  handleFilterCriteria(criteria: string) {
+    this.selectedCriteria = criteria;
+  }
 }

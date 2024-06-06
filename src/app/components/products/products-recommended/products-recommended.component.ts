@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-products-recommended',
@@ -8,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './products-recommended.component.scss'
 })
 export class ProductsRecommendedComponent {
+  @Output() filterCriteria = new EventEmitter<string>();
+  selectedCriteria: string = 'todos';
 
+  ngOnInit() {
+    this.setFilter(this.selectedCriteria);  
+  }
+
+  setFilter(criteria: string) {
+    this.selectedCriteria = criteria;
+    this.filterCriteria.emit(criteria);
+  }
 }
