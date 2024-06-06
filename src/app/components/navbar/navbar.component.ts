@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faBars, faBriefcase, faCaretDown, faHouseChimney, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faAddressBook, faAddressCard, faBars, faBlog, faBriefcase, faCaretDown, faHouseChimney, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -23,6 +23,9 @@ export class NavbarComponent {
   faMenuIcon = faBars;
   faHouseIcon = faHouseChimney;
   faWorkIcon = faBriefcase;
+  faAboutIcon = faUser;
+  faBlogIcon = faBlog;
+  faContactIcon = faAddressBook;
 
   toggleMenu() {
     this.isMenuToggle = !this.isMenuToggle;
